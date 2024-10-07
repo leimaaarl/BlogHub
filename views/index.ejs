@@ -1,0 +1,44 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+
+    <div class="content-header">
+        <img src="images/header-img.png">
+        <div class="header-text">
+            <p>Insights & Inspiration: Your Daily BlogHub</p>
+        </div>
+    </div>
+
+
+    <% if (!locals.content){ %>
+        <p class="no-post">There are no post available.</p>
+
+    <% }else{ %>
+
+        <div class="blog-container">
+
+            <% content.forEach(post => { %>
+
+                    <div class="blog-item">
+                        <img class="blog-img" src= <%= post.img %> >
+                        <p class="title"><%= post.title %></p>
+                        <p class="subtitle"><%= post.subtitle %></p>
+                        
+                        <div>
+                            <p class="author"><%= post.author %></p>
+                            
+                            <p class="date">January 01, 2001</p>
+                        </div>
+                    </div>
+                    
+            <% }); %>
+
+        </div>
+
+
+    <% } %>
+
+
+</main>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<div class="content-img-header">
+    <p>Create a Post</p>
+</div>
+
+
+<main>
+
+    <div class="form">
+        <form action="/submit" method="POST">
+            <input placeholder="Image URL" name="img">
+            <input placeholder="Title" name="title">
+            <input placeholder="Subtitle" name="subtitle">
+            <input placeholder="Author" name="author">
+            <textarea name="content"></textarea>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
+
+</main>
+
+<%- include("partials/footer.ejs") %>
